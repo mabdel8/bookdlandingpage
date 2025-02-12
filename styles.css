@@ -1,0 +1,345 @@
+:root {
+    --primary-color: #7827E7;
+    --secondary-color: #EA7FFC;
+    --text-color: #333;
+    --background-color: #fff;
+    --secondary-background: #f5f5f7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+.nav-links a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8rem 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: var(--text-color);
+    margin-top: 2rem;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 4rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.phone-screenshot {
+    max-width: 300px;
+    border-radius: 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.hero-illustration {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Features Section */
+.features {
+    padding: 6rem 2rem;
+    background-color: var(--secondary-background);
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-image {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Download Section */
+.download {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.download-content {
+    flex: 1;
+    padding-right: 4rem;
+}
+
+.download-illustration {
+    flex: 1;
+}
+
+.download-image {
+    max-width: 300px;
+    height: auto;
+    border-radius: 32px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.app-store-button {
+    display: inline-block;
+    background-image: url('assets/Download on App Store Button.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 200px;
+    height: 60px;
+    text-indent: -9999px;
+    border: none;
+    margin-top: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.app-store-button:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-background);
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 6rem;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .download {
+        flex-direction: column;
+        text-align: center;
+        padding: 4rem 2rem;
+    }
+
+    .download-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 968px) {
+    .feature-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+/* Add screenshots styling */
+.screenshots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.app-screenshot {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.app-screenshot:hover {
+    transform: translateY(-10px);
+}
+
+/* App Store Button Styling */
+.app-store-img {
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.app-store-img:hover {
+    transform: scale(1.05);
+}
+
+/* Main Screenshot Styling */
+.main-screenshot {
+    max-width: 300px;
+    height: auto;
+    border-radius: 32px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    max-height: 500px;
+}
+
+.main-screenshot:hover {
+    transform: translateY(-10px);
+}
+
+/* Move illustration to second section */
+.main-illustration {
+    max-width: 100%;
+    height: auto;
+    margin-top: 2rem;
+}
+
+/* Legal Pages Styling */
+.legal-content {
+    padding: 8rem 2rem 4rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.legal-content h1 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.legal-content h2 {
+    color: var(--primary-color);
+    margin: 2rem 0 1rem;
+}
+
+.legal-content section {
+    margin: 2rem 0;
+}
+
+.legal-content ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.legal-content li {
+    margin: 0.5rem 0;
+}
+
+.legal-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.legal-content a:hover {
+    text-decoration: underline;
+}
+
+.effective-date {
+    margin-top: 3rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* App Icon Styling */
+.app-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.app-icon:hover {
+    transform: scale(1.1);
+} 
